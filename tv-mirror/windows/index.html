@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to mirror a Windows PC to Android TV from Chrome or Edge – TV Mirror guide</title>
+<meta name="description" content="Mirror a Windows laptop or PC to an Android TV or Google TV from Chrome or Edge with TV Mirror. No software to install; includes system audio.">
+<meta name="google-adsense-account" content="ca-pub-6252919364842437">
+<link rel="canonical" href="https://12moon.games/tv-mirror/windows/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="How to mirror a Windows PC to Android TV from Chrome or Edge – TV Mirror guide">
+<meta property="og:description" content="Mirror a Windows laptop or PC to an Android TV or Google TV from Chrome or Edge with TV Mirror. No software to install; includes system audio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://12moon.games/tv-mirror/windows/">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffd36e"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="#121a33" stroke="#24305a" stroke-width="2"/><path d="M40 14a20 20 0 1 0 10 32 16 16 0 1 1-10-32z" fill="url(#g)"/><text x="22" y="40" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#0b1020">12</text></svg><span>12 Moon Games</span></a>
+<nav class="main" aria-label="Main"><a href="/">Home</a><a href="/tv-mirror/" aria-current="page">TV Mirror</a><a href="/games/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> › <a href="/tv-mirror/">TV Mirror</a></div>
+<h1>Mirror a Windows PC to your TV</h1>
+<p class="lead">No download, no driver, no account. Your browser does the work: TV Mirror runs a small web page on your TV that your PC opens over Wi-Fi.</p>
+
+<h2>Before you start</h2>
+<ul>
+<li>Use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> on Windows 10 or 11, updated to the latest version.</li>
+<li>Connect the PC and the TV to the same Wi-Fi network, or plug the PC into the same router with a cable.</li>
+<li>Open <strong>TV Mirror</strong> on the TV. In the Windows card it shows an address such as <code>192.168.1.20:9443</code>. Yours will be different.</li>
+</ul>
+
+<h2>Steps</h2>
+<ol class="steps">
+<li>In Chrome or Edge, type the address shown on the TV into the address bar exactly as shown, including <code>:9443</code>, and press Enter. You do not need to type <code>https://</code>.</li>
+<li>The first time, the browser shows a privacy or certificate warning. Click <strong>Advanced</strong> and then <strong>Proceed</strong> (Chrome) or <strong>Continue</strong> (Edge). <a href="#certificate">Why does this appear?</a></li>
+<li>The TV Mirror page opens. Click <strong>Share screen</strong>.</li>
+<li>In the window that opens, choose <strong>Entire screen</strong>, tick <strong>Also share system audio</strong> if you want sound, and click <strong>Share</strong>.</li>
+<li>Your screen appears on the TV. To stop, click <strong>Stop sharing</strong> in the bar at the bottom of the screen or close the tab.</li>
+</ol>
+
+<h2 id="certificate">About the certificate warning</h2>
+<p>Browsers only allow screen sharing on secure (HTTPS) pages. A website on the internet gets its security certificate from a public authority, but your TV is a device in your own home with a private address like 192.168.x.x, which no public authority can certify. TV Mirror therefore creates its own certificate on the TV, and the browser warns you because it doesn't recognise who issued it.</p>
+<p>The connection is still encrypted and stays inside your home network. You only need to accept the warning once per browser. If you ever see this warning for an address that is <em>not</em> the one shown on your TV, don't continue.</p>
+
+<h2>Getting the best result</h2>
+<ul>
+<li><strong>Sound:</strong> audio is sent only if you tick <em>Also share system audio</em> when sharing the <em>entire screen</em>. Sharing a single window cannot include system sound; this is a browser limit.</li>
+<li><strong>Smoothness:</strong> TV Mirror uses your PC's hardware video encoder and sends up to 60 frames per second. If the picture stutters, move closer to the router, use 5 GHz Wi-Fi, or connect the PC with a cable.</li>
+<li><strong>Presentations:</strong> share a single browser tab or window if you only want to show one thing and keep the rest of your screen private.</li>
+<li><strong>Protected video:</strong> streaming services that use copy protection may show a black area when shared. That is the service's choice, not a TV Mirror problem.</li>
+</ul>
+
+<div class="note">Page doesn't open? Check the address and the <code>:9443</code> part, make sure both devices are on the same network, and see <a href="/tv-mirror/troubleshooting/">troubleshooting</a>.</div>
+
+</div></main>
+<footer class="site"><div class="wrap cols">
+<div>© 2026 12 Moon Games · Independent apps and games from Istanbul, Türkiye</div>
+<div><a href="/privacy/">Privacy</a> · <a href="/tv-mirror/privacy/">TV Mirror privacy</a> · <a href="/tv-mirror/terms/">TV Mirror terms</a> · <a href="/contact/">Contact</a></div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TV Mirror troubleshooting – TV not showing, no sound, stutter</title>
+<meta name="description" content="Fix common screen mirroring problems with TV Mirror: TV not in the list, Windows page not opening, no sound, black screen, stuttering or delay.">
+<meta name="google-adsense-account" content="ca-pub-6252919364842437">
+<link rel="canonical" href="https://12moon.games/tv-mirror/troubleshooting/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="TV Mirror troubleshooting – TV not showing, no sound, stutter">
+<meta property="og:description" content="Fix common screen mirroring problems with TV Mirror: TV not in the list, Windows page not opening, no sound, black screen, stuttering or delay.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://12moon.games/tv-mirror/troubleshooting/">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffd36e"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="#121a33" stroke="#24305a" stroke-width="2"/><path d="M40 14a20 20 0 1 0 10 32 16 16 0 1 1-10-32z" fill="url(#g)"/><text x="22" y="40" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#0b1020">12</text></svg><span>12 Moon Games</span></a>
+<nav class="main" aria-label="Main"><a href="/">Home</a><a href="/tv-mirror/" aria-current="page">TV Mirror</a><a href="/games/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> › <a href="/tv-mirror/">TV Mirror</a></div>
+<h1>Troubleshooting</h1>
+<p class="lead">Most mirroring problems come down to three things: the app isn't open on the TV, the devices aren't on the same network, or the network blocks devices from finding each other. Start at the top.</p>
+
+<h2>My TV doesn't appear in the list</h2>
+<ol class="steps">
+<li><strong>Is TV Mirror open on the TV?</strong> TV Mirror only receives while it is open and on screen. If you pressed Home or opened another app, open it again.</li>
+<li><strong>Same network?</strong> Check the Wi-Fi name on both devices. Phones sometimes jump to mobile data or to a neighbouring network. Dual-band routers are fine: a phone on 5 GHz and a TV on 2.4 GHz from the same router can see each other.</li>
+<li><strong>Guest network or "client isolation"?</strong> Guest Wi-Fi and some office or hotel networks stop devices from talking to each other. Use your main home network, or turn off <em>AP isolation</em> / <em>client isolation</em> in the router settings.</li>
+<li><strong>VPN on the phone or computer?</strong> Some VPN apps block local network traffic. Pause the VPN and try again.</li>
+<li><strong>Restart the basics.</strong> Turn Wi-Fi off and on again on the phone, close and reopen TV Mirror, and if needed restart the router.</li>
+</ol>
+<p>Mesh Wi-Fi systems and some routers filter the "announcement" messages that iPhones and Macs use to find nearby screens. If your TV still doesn't appear, check the router for settings called <em>multicast</em>, <em>mDNS</em> or <em>IGMP snooping</em>.</p>
+
+<h2>The Windows page doesn't open</h2>
+<ul>
+<li>Type the address exactly as shown on the TV, including the number after the colon (<code>:9443</code>).</li>
+<li>Use Chrome or Edge. Other browsers may not support the screen-sharing features TV Mirror needs.</li>
+<li>If Windows asks whether to allow the network to be found, choose <em>Private network</em>. Some security programs block local connections, so try pausing them briefly.</li>
+<li>The TV's address can change after a router restart. Always use the one currently shown on the TV.</li>
+</ul>
+
+<h2>There is no sound</h2>
+<ul>
+<li><strong>Windows:</strong> share the <em>Entire screen</em> and tick <em>Also share system audio</em>. Without that tick the browser sends no sound.</li>
+<li><strong>iPhone/iPad:</strong> check the ring/silent switch and volume, and that the app you're using actually plays sound.</li>
+<li><strong>TV:</strong> check the TV volume and that it isn't muted or set to an external speaker that is switched off.</li>
+</ul>
+
+<h2>The picture is black</h2>
+<p>Apps and websites that play copy-protected video (many movie and TV services) block screen capture. You will see a black area or an error, while everything else mirrors normally. This protection is enforced by the app or website, so no mirroring app can show that content. Use the app's own Cast button or the app on your TV instead.</p>
+
+<h2>The picture stutters or freezes</h2>
+<ul>
+<li>Move the router, the TV or the phone closer, or remove obstacles between them.</li>
+<li>Prefer 5 GHz Wi-Fi, and connect the TV with an Ethernet cable if it has a port.</li>
+<li>Large downloads or other streams on the same network compete for bandwidth.</li>
+</ul>
+
+<h2>There is a short delay</h2>
+<p>That is intentional. TV Mirror keeps a small buffer, usually well under a second, so that short Wi-Fi hiccups don't turn into stutters. For video, photos and presentations this gives a much smoother result. Fast action games are better played on a wired connection or directly on the TV.</p>
+
+<h2>Still stuck?</h2>
+<p>Write to us at <a href="mailto:aytugbengu2000@gmail.com">aytugbengu2000@gmail.com</a>. Tell us your TV model, what you're mirroring from and what you see, and we'll help.</p>
+
+</div></main>
+<footer class="site"><div class="wrap cols">
+<div>© 2026 12 Moon Games · Independent apps and games from Istanbul, Türkiye</div>
+<div><a href="/privacy/">Privacy</a> · <a href="/tv-mirror/privacy/">TV Mirror privacy</a> · <a href="/tv-mirror/terms/">TV Mirror terms</a> · <a href="/contact/">Contact</a></div>
+</div></footer>
+</body>
+</html>
