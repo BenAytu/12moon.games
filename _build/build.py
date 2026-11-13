@@ -708,6 +708,7 @@ PAGES.append(page("/404.html", "Page not found – 12 Moon Games", "This page do
 (OUT / "style.css").write_text(CSS.strip() + "\n", encoding="utf-8")
 (OUT / "favicon.svg").write_text(LOGO.replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"'), encoding="utf-8")
 (OUT / "ads.txt").write_text("google.com, pub-6252919364842437, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
+(OUT / "app-ads.txt").write_text("google.com, pub-6252919364842437, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 (OUT / ".nojekyll").write_text("", encoding="utf-8")
 import shutil
