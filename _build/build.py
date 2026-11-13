@@ -137,18 +137,18 @@ ICON_LAPTOP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 ICON_WIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>'
 ICON_CAST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/><path d="M3 12a8 8 0 0 1 8 8M3 16a4 4 0 0 1 4 4"/><circle cx="3.5" cy="19.5" r=".8" fill="currentColor"/></svg>'
 
+GAME_NAME = "Hollow"  # working title; change here only
+GAME_URL = "/games/hollow/"
+
 APPS = [
     dict(href="/tv-mirror/", name="TV Mirror: Screen Mirroring", img="/img/tv-mirror.jpg", badge="New",
          platform="Android TV · Google TV", status="Coming soon to Google Play",
          desc="Turn your Android TV or Google TV into a screen mirroring receiver. Show your iPhone, iPad, Mac, Windows PC or Android phone on the big screen over Wi-Fi, smoothly and with nothing to install on the device you mirror from."),
 ]
 GAMES = [
-    dict(href="/games/horror-mall/", name="Horror Mall", img="/img/horror-mall.jpg", badge="In development",
-         platform="Android · Co-op horror", status="In development",
-         desc="Trapped in an abandoned shopping mall at night, you need twelve fuel cans to start the car in the parking lot. Search dark shops alone or with a friend, and stay out of sight of the creatures."),
-    dict(href="/games/toilet-survivor/", name="Toilet Survivor", img="/img/toilet-survivor.jpg", badge="In development",
-         platform="Android · Two-player action", status="In development",
-         desc="A chaotic two-player action shooter set somewhere no hero ever wanted to be. Hold your ground in tight spaces against wave after wave of enemies."),
+    dict(href=GAME_URL, name=GAME_NAME, img="/img/game-cover.jpg", badge="In development",
+         platform="Android · Online co-op horror · 1-4 players", status="In development",
+         desc="Trapped deep in an abandoned mine on the night shift, you and up to three friends must restart the old machines and reach the lift to the surface. But the machines are loud, something in the dark is listening, and at 2 a.m. the company blows the mine."),
 ]
 
 
@@ -235,16 +235,16 @@ PAGES = []
 
 # ------------------------------------------------------------------ home
 PAGES.append(page("/", "12 Moon Games – indie games and apps for your phone and TV",
-    "12 Moon Games is a small independent studio from Istanbul making mobile games such as Horror Mall and Toilet Survivor, and TV Mirror, a screen mirroring app for Android TV and Google TV.",
+    f"12 Moon Games is a small independent studio from Istanbul making {GAME_NAME}, an online co-op horror game set in an abandoned mine, and TV Mirror, a screen mirroring app for Android TV and Google TV.",
 f"""<h1 class="sr">12 Moon Games: indie games and apps</h1>
+{feature(GAMES[0], "See the game")}
 {feature(APPS[0])}
-{feature(GAMES[0])}
 
 <p class="intro">12 Moon Games is an independent studio from Istanbul that makes fun, polished games for your phone and simple, useful apps for your TV. Here is what we are working on.</p>
 
 <h2>Games</h2>
-<p>Short sessions, simple controls and plenty of personality. Our games are built for phones and are best enjoyed with a friend.</p>
-<div class="tiles">{"".join(tile(g) for g in GAMES)}</div>
+<p>Our first big game is an online co-op horror game for phones, built to be played with friends and voice chat. Grab a helmet lamp and stay together.</p>
+<div class="tiles">{"".join(tile(g) for g in GAMES)}<a class="tile" href="{GAME_URL}#creature"><div class="shot"><img src="/img/game-creature.jpg" alt="" width="1024" height="500" loading="lazy"></div>Meet the creature<small>It hunts by sound</small></a></div>
 
 <h2>Apps</h2>
 <p>TV Mirror turns an Android TV or Google TV into a screen mirroring receiver for iPhone, iPad, Mac, Windows PC and Android, with nothing to install on the device you mirror from. New to screen mirroring? Our step-by-step guides explain exactly what to tap on each device.</p>
@@ -587,62 +587,58 @@ PAGES.append(page("/tv-mirror/tr/", "TV Mirror Türkçe rehber – Android TV'ye
 """, lang="tr", section="/apps/"))
 
 # ------------------------------------------------------------------ games
-PAGES.append(page("/games/", "Games by 12 Moon Games – Horror Mall, Toilet Survivor",
-    "Mobile games in development at 12 Moon Games: Horror Mall, a co-op horror escape, and Toilet Survivor, a two-player action shooter.",
+PAGES.append(page("/games/", f"Games by 12 Moon Games – {GAME_NAME}, online co-op horror",
+    f"Games in development at 12 Moon Games: {GAME_NAME}, an online co-op horror game for 1-4 players set in an abandoned mine.",
 f"""<div class="crumbs"><a href="/">Home</a> › Games</div>
 <h1>Games</h1>
-<p class="lead">Short sessions, simple controls and plenty of personality. Here is what we are working on.</p>
+<p class="lead">Games built to be played together: simple controls, tense moments and plenty of shouting over voice chat.</p>
 {"".join(feature(g, "See the game") for g in GAMES)}
 <h2>Play before release</h2>
 <p>We test every game with real players on Google Play before launch. Want to join? <a href="/contact/#testers">Write to us</a> and we will add you to the test group.</p>
 {CONTACT_BOXES}
-""", section="/games/", image="/img/horror-mall.jpg"))
+""", section="/games/", image="/img/game-cover.jpg"))
 
-PAGES.append(page("/games/horror-mall/", "Horror Mall – co-op horror escape game",
-    "Horror Mall is a mobile horror escape game: trapped in an abandoned shopping mall, find twelve fuel cans to start the car and escape the creatures.",
-"""<div class="crumbs"><a href="/">Home</a> › <a href="/games/">Games</a></div>
-<div class="cover"><img src="/img/horror-mall.jpg" alt="Horror Mall cover art: a dark mall corridor and a red fuel can" width="1024" height="500"></div>
-<h1>Horror Mall</h1>
-<p class="lead">You are trapped inside an abandoned shopping mall. The only way out is a car in the parking lot, but its tank is empty.</p>
+PAGES.append(page(GAME_URL, f"{GAME_NAME} – online co-op horror in an abandoned mine",
+    f"{GAME_NAME} is an online co-op horror game for 1-4 players: trapped in an abandoned mine on the night shift, restart the machines, reach the lift and escape the creature before the mine is blown at 2 a.m.",
+f"""<div class="crumbs"><a href="/">Home</a> › <a href="/games/">Games</a></div>
+<div class="cover"><img src="/img/game-cover.jpg" alt="{GAME_NAME} key art: two miners run through a lantern-lit mine while a creature crawls out of the dark" width="1024" height="500"></div>
+<span class="platform">Android · Online co-op · 1-4 players</span>
+<h1>{GAME_NAME}</h1>
+<p class="lead">The night shift starts at 8 p.m. At 2 a.m. the company blows the mine. Nobody told you, and you are not alone down here.</p>
 <p><span class="tag">In development for Android</span></p>
+
 <h2>The goal</h2>
-<p>Search the dark shops, corridors and service rooms for <strong>twelve fuel cans</strong>. Carry each one back, fill the car and get out before the night is over. Sounds simple, until you hear something moving in the next aisle.</p>
-<h2>Survive the creatures</h2>
-<p>Mysterious creatures roam the halls and they will do anything to stop you. Stay out of sight, listen carefully and pick your route. Running makes noise; hiding takes time. Every can you find makes the mall a little more dangerous.</p>
-<h2>Better together</h2>
-<p>Play alone or team up with a friend in co-op. Split up to search faster, or stick together and watch each other's backs.</p>
-<h2>Features</h2>
-<ul>
-<li>Dark, tense atmosphere built for headphones</li>
-<li>Twelve fuel cans hidden across the mall: find them all to escape</li>
-<li>Simple, intuitive touch controls</li>
-<li>Smooth performance tuned for phones</li>
-</ul>
-""", section="/games/", image="/img/horror-mall.jpg"))
+<p>You and up to three friends are trapped deep underground. Collect fuel in the dark tunnels, feed the old machines and pull the levers that open the heavy doors, one section at a time, until you reach the lift to the surface. Every door you open brings you closer to daylight, and deeper into its territory.</p>
 
-PAGES.append(page("/games/toilet-survivor/", "Toilet Survivor – two-player action shooter",
-    "Toilet Survivor is a chaotic two-player action shooter: defend yourself against waves of enemies in tight spaces and become the ultimate survivor.",
-"""<div class="crumbs"><a href="/">Home</a> › <a href="/games/">Games</a></div>
-<div class="cover"><img src="/img/toilet-survivor.jpg" alt="Toilet Survivor cover art: restroom stalls, a crosshair and glowing eyes" width="1024" height="500"></div>
-<h1>Toilet Survivor</h1>
-<p class="lead">An action shooter set somewhere no hero ever wanted to be. Hold the line, wave after wave.</p>
-<p><span class="tag">In development for Android</span></p>
-<h2>How it plays</h2>
-<p>Enemies keep coming and there is very little room to move. Toilet Survivor is about positioning: find the best corner, watch your angles and make every shot count. Each wave is a little faster and a little meaner than the last.</p>
-<h2>Two players</h2>
-<p>Team up with a friend and split the work: one holds the door while the other covers the flank. Coordination beats firepower.</p>
+<h2 id="creature">The creature</h2>
+<div class="cover"><img src="/img/game-creature.jpg" alt="The creature crawling through a mine tunnel" width="1024" height="500" loading="lazy"></div>
+<p>Something used to work on this shift. Now it crawls through the tunnels on all fours, with a hollow face and a mouth full of teeth. It cannot stand the light, but it hears everything: footsteps, running, and above all the roar of the machines you need to escape.</p>
+<p>You will know when it is close: <strong>the colours start to drain from the world</strong> until only red is left. When that happens, hide, stay quiet, or run, and hope your friends are faster than you.</p>
+
+<h2>Better together</h2>
+<p>{GAME_NAME} is built for online co-op with friends. Split up to cover more tunnels, or stick together and watch each other's backs. Ping fuel and danger for your team, talk over voice chat and decide who makes the noise and who keeps watch. Fall, and your team can still carry on.</p>
+
 <h2>Features</h2>
 <ul>
-<li>Fast, wave-based action in tight spaces</li>
-<li>Two-player mode</li>
-<li>Strategy and reflexes in equal measure</li>
-<li>Short rounds that are perfect for a quick break</li>
+<li>Online co-op horror for 1 to 4 players, with voice chat</li>
+<li>A lantern-lit abandoned mine with doors, levers, cages and hiding places</li>
+<li>A creature that hunts by sound, and a world that loses its colour when it gets close</li>
+<li>A signal flare gun instead of weapons: stun it, don't kill it</li>
+<li>A ticking night-shift clock: escape before 2 a.m.</li>
+<li>Simple touch controls, tuned for phones</li>
 </ul>
-""", section="/games/", image="/img/toilet-survivor.jpg"))
+<p>Want to play it early? <a href="/contact/#testers">Join the test group</a>.</p>
+""", section="/games/", image="/img/game-cover.jpg"))
+
+# old game URLs -> redirect pages
+for old, new in (("/games/horror-mall/", GAME_URL), ("/games/toilet-survivor/", "/games/")):
+    d = OUT / old.strip("/")
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(f'<!doctype html><meta charset="utf-8"><title>Moved</title><meta name="robots" content="noindex"><link rel="canonical" href="{SITE}{new}"><meta http-equiv="refresh" content="0; url={new}"><a href="{new}">This page has moved.</a>', encoding="utf-8")
 
 # ------------------------------------------------------------------ about / contact / privacy
 PAGES.append(page("/about/", "About 12 Moon Games",
-    "12 Moon Games is a small independent studio from Istanbul, Türkiye, making TV Mirror and casual mobile games.",
+    f"12 Moon Games is a small independent studio from Istanbul, Türkiye, making {GAME_NAME}, an online co-op horror game, and TV Mirror.",
 """<div class="crumbs"><a href="/">Home</a> › About</div>
 <h1>About 12 Moon Games</h1>
 <p class="lead">We are a small independent studio from Istanbul, Türkiye, founded by developer Aytuğ Bengü.</p>
