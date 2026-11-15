@@ -8,7 +8,7 @@ from pathlib import Path
 
 OUT = Path(sys.argv[1])
 SITE = "https://12moon.games"
-EMAIL = "aytugbengu2000@gmail.com"
+EMAIL = "benaytu@12moon.games"
 ADSENSE = "ca-pub-6252919364842437"
 UPDATED = "14 November 2026"
 
@@ -583,7 +583,7 @@ PAGES.append(page("/tv-mirror/tr/", "TV Mirror Türkçe rehber – Android TV'ye
 <li><strong>Siyah görüntü:</strong> Telif korumalı video uygulamaları ekran yansıtmayı engeller; bu uygulamanın kendi tercihidir.</li>
 <li><strong>Kısa gecikme:</strong> Görüntünün takılmaması için bilerek saniyenin altında küçük bir tampon kullanılır.</li>
 </ul>
-<p>Yardım için: <a href="mailto:aytugbengu2000@gmail.com">aytugbengu2000@gmail.com</a> · <a href="/tv-mirror/privacy/">Gizlilik politikası</a> · <a href="/tv-mirror/terms/">Kullanım koşulları</a></p>
+<p>Yardım için: <a href="mailto:benaytu@12moon.games">benaytu@12moon.games</a> · <a href="/tv-mirror/privacy/">Gizlilik politikası</a> · <a href="/tv-mirror/terms/">Kullanım koşulları</a></p>
 """, lang="tr", section="/apps/"))
 
 # ------------------------------------------------------------------ games
